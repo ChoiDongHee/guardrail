@@ -1,0 +1,9 @@
+pip install git+https://github.com/haven-jeon/PyKoSpacing.git
+
+from pykospacing import Spacing
+
+spacing = Spacing()
+print(spacing("아름다운우리강산"))  # 아름다운 우리 강산
+
+
+pip install tf-keras

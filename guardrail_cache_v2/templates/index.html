@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redis Vector Similarity Search</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Redis Vector Similarity Search</h1>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/admin">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Alert Container -->
+            <div id="alert-container"></div>
+
+            <!-- Instructions Card -->
+            <div class="card">
+                <h2>Vector Similarity Search</h2>
+                <p>Ask a question below to search for similar questions in the database.</p>
+                <p>If a similar question is found (similarity score >= 95%), the cached response will be shown.</p>
+                <p>두 가지 검색 방법을 지원합니다: <strong>벡터 검색</strong>과 <strong>키워드 검색</strong></p>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="card">
+                <div class="chat-container">
+                    <div id="chat-messages" class="chat-messages">
+                        <!-- Messages will be added here via JS -->
+                        <div class="message message-bot">
+                            <div class="message-info">Bot</div>
+                            <div class="message-content">안녕하세요! 어떤 질문이 있으신가요?</div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <form id="chat-form">
+                            <div class="form-group">
+                                <label for="question-input">Your Question:</label>
+                                <div class="input-container">
+                                    <input type="text" id="question-input" class="form-control" placeholder="Type your question here...">
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading-indicator" style="display: none; text-align: center; margin-top: 1rem;">
+                <p>Processing your request...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Redis Vector Similarity Search</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
